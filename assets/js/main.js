@@ -21,8 +21,8 @@
   /* ---------- Liens vers l'application (pas encore en ligne) ----------
      Quand l'application REFL-CI sera publiée, il suffira de renseigner
      son adresse ci-dessous : les boutons y mèneront directement. */
-  var APP_URL = ''; // ex. 'https://app.refl-ci.org'
-  var CHEMINS = { adherer: '/adhesion', niveau: '/mes-infos', carte: '/carte' };
+  var APP_URL = 'https://refl-ci-app.vercel.app'; // à remplacer par le domaine définitif
+  var CHEMINS = { adherer: '/adhesion', niveau: '/mes-infos' }; // la carte de membre viendra plus tard
   var TITRES = {
     adherer: 'Adhérer au REFL-CI',
     niveau: 'Voir mes infos',
@@ -32,8 +32,8 @@
   var dialogue = document.getElementById('bientot');
   document.querySelectorAll('[data-app]').forEach(function (lien) {
     var cle = lien.getAttribute('data-app');
-    if (APP_URL) {
-      lien.setAttribute('href', APP_URL + (CHEMINS[cle] || ''));
+    if (APP_URL && CHEMINS[cle]) {
+      lien.setAttribute('href', APP_URL + CHEMINS[cle]);
       return;
     }
     lien.addEventListener('click', function (e) {

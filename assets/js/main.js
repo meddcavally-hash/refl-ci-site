@@ -22,10 +22,9 @@
      Quand l'application REFL-CI sera publiée, il suffira de renseigner
      son adresse ci-dessous : les boutons y mèneront directement. */
   var APP_URL = 'https://refl-ci-app.vercel.app'; // à remplacer par le domaine définitif
-  var CHEMINS = { adherer: '/adhesion', niveau: '/mes-infos' }; // la carte de membre viendra plus tard
+  var CHEMINS = { espace: '/' }; // page d'accueil de l'application : adhésion, inscription à un niveau, consultation
   var TITRES = {
-    adherer: 'Adhérer au REFL-CI',
-    niveau: 'Voir mes infos',
+    espace: 'Espace membre',
     carte: 'Demander ma carte de membre'
   };
 
